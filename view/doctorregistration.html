@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../asset/js/doctorregistration.js"></script>
+</head>
+<body>
+    <center>
+        <h1>Doctor registration</h1>
+    </center>
+    <hr>
+    <form name="infoForm" action="../controller/doctorReg.php" method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Personal Information</legend>
+            First Name: <input type="text" name="firstname" id="firstname"> 
+            <p id="firstnameER"></p>
+            <br><br>
+            Last Name: <input type="text" name="lastname" id="lastname">
+            <p id="lastnameER"></p>
+            <br><br>
+            Gender: <input type="radio" id="g1" name="gender">
+            <label for="g1">Male</label>
+            <input type="radio" id="g2" name="gender">
+            <label for="g2">Female</label>
+            <p id="genderER"></p>
+            <br><br>
+            Date of Birth: <input type="date" name="dob" id="dob">
+            <br><br>
+            Religion: <select name="religion" id="religion">
+                <option value selected hidden="">----</option>
+                <option value="Islam">Islam</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Christian">Christian</option>
+                <option value="Buddhist">Buddhist</option>
+            </select>
+        </fieldset>
+        <p id="religionER"></p>
+        <br>
+        <fieldset>
+            <legend>Educational Information</legend>
+
+            ssc: <input type="text" name="ssc" maxlength="11" placeholder="GPA" id="ssc">
+            <p id="sscER"></p>
+            <br><br>
+            hsc: <input type="text" name="hsc" placeholder="GPA" id="hsc">
+            <p id="hscER"></p>
+            <br><br>
+            bachelors: <input type="text" name="mbbs" maxlength="11" placeholder="GPA" id="mbbs">
+            <p id="mbbsER"></p>
+            <br><br>
+           
+        </fieldset>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="PresentAddress">Present Address: </label>
+            <textarea id="PresentAddress" name="PresentAddress" rows="2" cols="50">
+			</textarea>
+            <p id="PresentAddressER"></p>
+            <br><br>
+            <label for="PermanentAddress">Permanent Address: </label>
+            <textarea id="PermanentAddress" name="PermanentAddress" rows="2" cols="50">
+			</textarea>
+            <p id="PermanentAddressER"></p>
+            <br><br>
+            Phone: <input type="tel" name="phone" maxlength="11" placeholder="contact number" id="phone">
+            <p id="phoneER"></p>
+            <br><br>
+            Email: <input type="email" name="email" placeholder="Valid Email Address " id="email">
+            <p id="emailER"></p>
+            <br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Login Information</legend>
+            <br><br>
+            Username: <input type="text" name="username" id="username">
+            <p id="usernameER"></p>
+            <br><br>
+            Password: <input type="password" name="password" id="password">
+            <p id="passwordER"></p>
+            <br><br>
+        </fieldset>
+        <br><br>
+  
+        <button  id="submit" type="submit" name="submit" value="Submit">Submit</button>
+    </form>
+
+    <br>
+
+    Already have an account? <a href="./doctorlogin.html"><b> Click here </b></a> to login
+</body>
+</html>
